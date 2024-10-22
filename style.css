@@ -1,0 +1,384 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times;
+    font-size: 14px;
+    color: #333; /* Default text color */
+    background-color: #f8f9fa; /* Default background */
+}
+
+/* Header */
+header {
+    background-color: #433878;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff; /* Teks header berwarna putih agar kontras dengan background gelap */
+}
+
+header h1, header p {
+    color: #fff; /* Sesuaikan teks header */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.image-display {
+    margin-right: 1rem;
+}
+
+.image-display img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.wadah {
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar */
+nav {
+    text-align: left;
+    background-color: #7E60BF; /* Soft purple */
+    padding: 1rem;
+    border-radius: 10px;
+    color: #fff; /* Teks navbar berwarna putih */
+    overflow: auto; /* Tambahkan scroll jika konten terlalu banyak */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Vertikal untuk mobile */
+    align-items: left;
+}
+
+nav ul li a {
+    color: #fff; /* Putih untuk kontras dengan background navbar */
+    transition: color 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+nav ul li a:hover {
+    color: #B3B3FF; /* Warna hover untuk lebih lembut */
+}
+
+/* Section */
+section {
+    background-color: #E4B1F0; /* Soft purple-blue */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #1e1d1d; /* Teks section kontras lembut */
+}
+
+.content-item h2 {
+    margin-bottom: 15px;
+    color: #4A0072; /* Warna judul yang lebih gelap untuk section */
+}
+
+.content-item p {
+    margin-bottom: 10px;
+    color: #323232; /* Warna teks paragraf yang lebih soft */
+}
+
+/* biar jadi kanan kiri */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.soft-skill {
+    width: 45%;
+    padding: 10px;
+}
+
+.hard-skill {
+    width: 45%;
+    padding: 10px;
+}
+
+.skills-container h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.skills-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills-container li {
+    margin-bottom: 5px;
+}
+
+/* Aside */
+aside {
+    background-color: #FFE1FF; /* Soft lavender */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #4A0072; /* Teks aside kontras dengan background */
+    overflow: auto; /* Tambahkan scroll jika konten terlalu banyak */
+}
+
+aside h2 {
+    margin-bottom: 15px;
+    color: #4A0072; /* Warna judul yang sesuai dengan background aside */
+}
+
+aside ul li {
+    margin-bottom: 10px;
+    color: #3f3f3f; /* Warna teks dalam aside */
+    list-style: none; /* Menghilangkan bullet points */
+}
+
+/* Footer */
+footer {
+    background-color: #433878; /* Gelap, sehingga teks akan berwarna putih */
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff; /* Warna teks di footer putih */
+}
+
+footer ul li, footer .social-media p {
+    color: #dae4ec; /* Warna teks footer untuk lebih soft */
+}
+
+footer h2, footer p {
+    color: #dae4ec; /* Warna teks di footer putih */
+}
+
+
+/* Efek hover pada ikon */
+.social-media i {
+    color: #b3b3ff; /* Ikon dengan warna lembut */
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-media i:hover {
+    color: #e1e1ff; /* Warna ikon saat hover */
+}
+
+/* Layout untuk Mobile */
+header, nav, section, aside, footer {
+    width: 100%;
+    padding: 1rem;
+    margin: 10px;
+}
+
+section, aside {
+    margin-bottom: 10px;
+}
+
+aside {
+    padding: 1rem;
+    max-height: 30vh;
+    overflow: auto;
+}
+
+footer .social-media p {
+    margin-right: 1rem; /* Tambahkan sedikit jarak antar item */
+    white-space: nowrap; /* Pastikan teks tidak turun ke baris berikutnya */
+}
+
+
+/* Layout untuk Tablet Lanscape */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+        display: grid;
+        grid-template-columns: 25% 75%; /* 25% untuk nav dan 75% untuk section */
+        grid-template-rows: auto auto auto; /* Mengatur baris untuk header, aside, dan footer */
+        grid-template-areas:
+            "header header"
+            "nav section"
+            "aside aside"
+            "footer footer";
+    }
+
+    header {
+        grid-area: header; /* Menentukan area grid untuk header */
+        width: 100%; /* Membuat header 100% lebar */
+    }
+
+    nav {
+        grid-area: nav; /* Menentukan area grid untuk nav */
+        display: flex;
+        flex-direction: column; /* Tetap vertikal untuk item di dalam nav */
+        padding: 1rem; /* Sesuaikan padding */
+        overflow: auto; /* Tambahkan scroll jika konten terlalu banyak */
+    }
+
+    section {
+        grid-area: section; /* Menentukan area grid untuk section */
+        padding: 2rem; /* Sesuaikan padding */
+    }
+
+    aside {
+        grid-area: aside; /* Menentukan area grid untuk aside */
+        padding: 1rem; /* Sesuaikan padding */
+        max-height: none; /* Hapus max-height untuk lebih fleksibel */
+        overflow: auto; /* Tambahkan scroll jika konten terlalu banyak */
+    }
+
+    footer {
+        grid-area: footer; /* Menentukan area grid untuk footer */
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1rem;
+        background-color: #433878;
+    }
+
+    nav ul, aside ul {
+        flex-direction: column; /* Tetap vertikal untuk nav dan aside */
+        list-style: none; /* Menghilangkan bullet points */
+    }
+}
+
+/* Layout untuk Tablet Potrait */
+@media (min-width: 600px) and (max-width: 767px) {
+    body {
+        font-size: 16px;
+        display: grid;
+        grid-template-columns: 1fr; /* Satu kolom penuh untuk tampilan potret */
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "section"
+            "footer"; /* Memastikan aside berada di bawah */
+    }
+
+    nav {
+        display: flex; /* Mengubah ke flexbox untuk menata item */
+        flex-direction: row; /* Horizontal */
+        justify-content: space-between; /* Memberikan jarak antara elemen */
+        padding: 1rem; /* Sesuaikan padding */
+        margin: 1rem 0; /* Tambahkan margin atas dan bawah untuk spasi */
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Horizontal untuk item nav */
+        list-style: none; /* Menghilangkan bullet points */
+        padding: 0;
+        margin: 0;
+        gap: 1rem; /* Menambahkan jarak antar item */
+        justify-content: center;
+        /* width: 100%; ini biar tengah */
+    }
+
+    section {
+        padding: 1rem; /* Sesuaikan padding */
+    }
+
+    aside {
+        display: flex;
+        flex-direction: row; /* Menyusun item aside secara horizontal */
+        padding: 1rem; /* Sesuaikan padding */
+        margin: 1rem 0; /* Tambahkan margin untuk spasi */
+    }
+
+    aside ul {
+        list-style: none; /* Menghilangkan bullet points */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row; /* Horizontal untuk item aside */
+        gap: 1rem; /* Menambahkan jarak antar item */
+    }
+
+    aside h2 {
+        text-align: left;
+        margin: 0;
+        padding-right: 1rem; /* Tambahkan sedikit ruang antara judul dan item */
+    }
+}
+
+/* Layout untuk Desktop */
+@media (min-width: 1025px) {
+    body {
+        font-size: 16px;
+        display: grid;
+        grid-template-columns: 25% 50% 25%; /* Kolom untuk desktop */
+        grid-template-rows: auto 1fr auto; /* Baris dengan flex untuk mengisi ruang */
+        grid-template-areas:
+            "header header header"
+            "nav section aside"
+            "footer footer footer"; /* Footer di bawah konten */
+        margin: 0; /* Pastikan tidak ada margin pada body */
+        height: 100vh; /* Mengatur tinggi body agar penuh */
+    }
+
+    header {
+        grid-area: header; /* Header mengambil area header */
+        margin: 0; /* Pastikan tidak ada margin */
+    }
+
+    nav {
+        grid-area: nav; /* Nav mengambil area nav */
+        display: flex;
+        flex-direction: column; /* Vertikal untuk nav */
+        padding: 1rem; /* Sesuaikan padding */
+        overflow: auto; /* Tambahkan scroll jika konten terlalu banyak */
+    }
+
+    section {
+        grid-area: section; /* Section mengambil area section */
+        padding: 2rem; /* Sesuaikan padding */
+    }
+
+    aside {
+        grid-area: aside; /* Aside mengambil area aside */
+        padding: 1rem; /* Sesuaikan padding */
+        max-height: none; /* Hapus batas tinggi untuk lebih fleksibel */
+        overflow: auto; /* Tambahkan scroll jika konten terlalu banyak */
+    }
+
+    aside ul {
+        list-style: none; /* Menghilangkan bullet points */
+    }
+
+    footer {
+        grid-area: footer; /* Footer mengambil area footer */
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1rem;
+        background-color: #433878;
+    }
+
+    nav ul {
+        list-style: none; /* Menghilangkan bullet points */
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 0.5rem; /* Tambahkan jarak bawah antar item */
+    }
+}

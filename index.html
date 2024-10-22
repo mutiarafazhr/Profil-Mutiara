@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">  
+            <div class="image-display">
+                <img id="profile-image" src="profil.jpeg" />
+            </div>
+            <h1>Profil Mutiara</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showContent('biodata')">Biodata</a></li>
+            <li><a href="#" onclick="showContent('pendidikan')">Pendidikan</a></li>
+            <li><a href="#" onclick="showContent('pengalaman')">Pengalaman</a></li>
+            <li><a href="#" onclick="showContent('keahlian')">Keahlian</a></li>
+            <li><a href="#" onclick="showContent('publikasi')">Publikasi</a></li>
+        </ul>
+    </nav>
+
+    <section id="content">
+        <!-- Konten dinamis akan tampil di sini -->
+        <div id="biodata" class="content-item">
+            <h2>Biodata</h2>
+            <p>NIM: 2023081014</p>
+            <p>Nama: Mutiara Fitria Azzahra</p>
+            <p>Agama: Islam</p>
+            <p>Tanggal Lahir: 13 Maret 2005</p>
+            <p>Tempat Lahir: Tangerang</p>
+        </div>
+        <div id="pendidikan" class="content-item" style="display:none;">
+            <h2>Pendidikan</h2>
+            <h4>SMP Dirghantara</h4>
+            <p>2017-2020</p>
+            <h4>SMAS Pramita</h4>
+            <p>2020-2023</p>
+            <h4>Universitas Pembangunan Jaya</h4>
+            <p>2023-2027</p>
+        </div>
+        <div id="pengalaman" class="content-item" style="display:none;">
+            <h2>Pengalaman</h2>
+            <h5>Wakil Ketua Himpunan Mahasiswa Sistem Informasi</h5>
+            <p>Institusi: HIMASIF
+                <br>
+                Tahun: 2024</p>
+            <h5>Staff Tagging Data BEI</h5>
+            <p>Institusi: Badan Riset dan Inovasi Nasional
+                <br>
+                Tahun: 2024</p>
+            <h5>Kepala Divisi Project Planner Pemoeda</h5>
+            <p>Institusi: Pemoeda
+                <br>
+                Tahun: 2024</p>
+            <h5>Student Ambassador UPJ Divisi Telemarketing</h5>
+            <p>Institusi: Universitas Pembangunan Jaya
+                <br>
+                Tahun: 2024</p>
+            <h5>Sahabat Danacita Campus Ambassador</h5>
+            <p>Institusi: Danacita
+                <br>
+                Tahun: 2024</p>
+            <h5>Divisi KOMINFO DAKAURI</h5>
+            <p>
+                Institusi: DAKAURI Universitas Pembangunan Jaya
+                <br>
+                Tahun: 2024
+            </p>
+        </div>
+        <div id="keahlian" class="content-item" style="display:none;">
+            <h2>Keahlian</h2>
+            <div class="skills-container">
+                <div class="soft-skill">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Public Speaking</li>
+                        <li>Leadership</li>
+                        <li>Problem Solving</li>
+                        <li>Team Work</li>
+                        <li>Time Management</li>
+                        <li>Emotional Intelligence</li>
+                    </ul>
+                </div>
+                <div class="hard-skill">
+                    <h3>Hard Skills</h3>
+                    <ul>
+                        <li>Microsoft Office</li>
+                        <li>MySQL</li>
+                        <li>PHP</li>
+                        <li>HTML, CSS</li>
+                        <li>Figma</li>
+                        <li>Script Writer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="publikasi" class="content-item" style="display:none;">
+            <h2>Publikasi</h2>
+            <p>https://github.com/mutiarafazhr/KPBD-Mutiara</p>
+        </div>
+    </section>
+
+    <aside>
+        <h2>Hobi</h2>
+        <ul>
+            <li>Ikut Organisasi</li>
+            <li>Ngoding</li>
+            <li>Membaca Novel</li>
+            <li>Memotret</li>
+            <li>Mengedit Video</li>
+            <li>Membuat Script</li>
+            <li>Mendengar Musik</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <div class="social-media">
+            <p><i class="fab fa-twitter"></i> Twitter: @mfazzhr</p>
+            <p><i class="fab fa-facebook"></i> Facebook: Mutiaraaa</p>
+            <p><i class="fab fa-instagram"></i> Instagram: @mfazzhr</p>
+        </div>
+        <ul>
+            <li><p>&copy; Copyright UTS Mutiara Fitria</p></li>
+        </ul>
+        <div>
+            <h3>Mutiara's Profil Web</h3>
+            <p>Web Untuk Profil Mahasiswa</p>
+        </div>
+    </footer>
+
+    <script>
+        function showContent(section) {
+            var contents = document.querySelectorAll('.content-item');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+    
+</body>
+</html>
